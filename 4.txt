@@ -1,0 +1,6 @@
+Function.prototype.bind = function (ctx) {
+  for (key in ctx) {
+    global[key] = ctx[key]
+  }
+  return this
+}

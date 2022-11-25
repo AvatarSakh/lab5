@@ -1,0 +1,22 @@
+function calculate() {
+  let ArrayLeft = [];
+  for(let i = 0; i<arguments.length; i++){
+    ArrayLeft[i] = arguments[i];
+  } 
+  return function(){
+   let ArrayRight = [];
+  for(let i = 0; i<arguments.length; i++){
+    ArrayRight[i] = arguments[i];
+  } 
+    let count = 0;
+    for(let i =0; i<ArrayLeft.length;i++)
+      {
+        count +=ArrayLeft[i];
+      }
+    for(let i =0; i<ArrayRight.length;i++)
+      {
+        count +=ArrayRight[i];
+      }
+    return count;
+    }
+  }

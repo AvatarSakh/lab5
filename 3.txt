@@ -1,0 +1,12 @@
+Array.prototype.filter = function (callback, context) {
+  const newArr = [];
+  const length = this.length;
+  for (let i = 0; i < length; i++) {
+    if (i in this) {
+      if (callback.call(context, this[i], i, this)) {
+        newArr.push(this[i]);
+      }
+    }
+  }
+  return newArr;
+};
